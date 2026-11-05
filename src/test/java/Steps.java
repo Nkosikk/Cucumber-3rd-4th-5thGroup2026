@@ -1,10 +1,19 @@
 import io.cucumber.java.en.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chromium.ChromiumDriver;
 
 
 public class Steps {
 
+    WebDriver driver;
+
     @Given("I am on home page")
     public void i_am_on_home_page() {
+        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--headless=new");
+        driver= new ChromeDriver(options);
 
     }
     @And("I click login button")
