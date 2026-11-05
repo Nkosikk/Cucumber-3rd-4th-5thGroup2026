@@ -1,14 +1,7 @@
-Feature: Login
+Feature: User registration
 
-  Scenario Outline: Register at ndosi automtion
+  Scenario: Register users with random details and groups
     Given I am on home page
     And I click login button
-    And I enter username <username>
-    And I enter password <password>
-    When I click submit button
-    Then I should be logged in successfully
-
-    Examples:
-      | username | password |
-      | njceles@gmail.com    | @12345678    |
-#      | user2    | pass2    |
+    When I register 3 users with random details
+    Then the registered users should be saved to "test-output/registered-users.csv"
