@@ -1,7 +1,7 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
-!**/src/Steps/**/target/
+!**/src/steps/**/target/
 .kotlin
 
 ### IntelliJ IDEA ###
@@ -30,7 +30,7 @@ target/
 /.nb-gradle/
 build/
 !**/src/main/**/build/
-!**/src/Steps/**/build/
+!**/src/steps/**/build/
 
 ### VS Code ###
 .vscode/
