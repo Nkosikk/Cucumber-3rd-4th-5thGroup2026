@@ -1,10 +1,12 @@
+package steps;
+
 import io.cucumber.java.en.*;
 
 
 public class Steps {
 
-    @Given("I am on home page page")
-    public void i_am_on_home_page_page() {
+    @Given("I am on home page")
+    public void i_am_on_home_page() {
 
     }
     @And("I click login button")
