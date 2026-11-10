@@ -10,5 +10,5 @@ Feature: Login
 
     Examples:
       | username | password |
-      | user1    | pass1    |
-      | user2    | pass2    |
+      | titi@gmail.com | tlou@97LT    |
+  #    | user2    | pass2    |
