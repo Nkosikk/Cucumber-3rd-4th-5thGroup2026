@@ -11,4 +11,3 @@ Feature: Login
     Examples:
       | username | password |
       | njceles@gmail.com    | @12345678    |
-#      | user2    | pass2    |
