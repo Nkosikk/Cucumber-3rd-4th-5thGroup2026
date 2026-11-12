@@ -1,9 +1,9 @@
 package Steps;
 
-import io.cucumber.java.PendingException;
+import Utils.BrowserFactory;
 import io.cucumber.java.en.*;
 
-public class LoginSteps {
+public class LoginSteps extends Base {
 
     @Given("I am on home page")
     public void i_am_on_home_page() {
@@ -11,6 +11,7 @@ public class LoginSteps {
     }
     @And("I click login button")
     public void i_click_login_button() {
+        homePage.clickLoginButton();
 
     }
     @And("I enter username (.*)$")
