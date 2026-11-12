@@ -1,5 +1,6 @@
 package Steps;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 
 public class LoginSteps {
@@ -26,6 +27,11 @@ public class LoginSteps {
     }
     @Then("I should be logged in successfully")
     public void i_should_be_logged_in_successfully() {
+
+    }
+
+    @And("Verify Menu button exist")
+    public void verifyMenuButtonExist() {
 
     }
 }
