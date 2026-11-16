@@ -3,7 +3,7 @@ package Steps;
 import Utils.BrowserFactory;
 import io.cucumber.java.en.*;
 
-public class LoginSteps extends Base {
+public class LoginSteps extends Steps.Base {
 
     @Given("I am on home page")
     public void i_am_on_home_page() {
