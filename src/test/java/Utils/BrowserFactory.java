@@ -40,7 +40,7 @@ public class BrowserFactory {
 
     @Test
     public void test(){
-        startBrowser("CHRME","https://ndosisimplifiedautomation.vercel.app/");
+        startBrowser("EDGE","https://ndosisimplifiedautomation.vercel.app/");
     }
 
 }
