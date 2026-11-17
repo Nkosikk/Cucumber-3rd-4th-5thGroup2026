@@ -38,9 +38,4 @@ public class BrowserFactory {
 
     }
 
-    @Test
-    public void test(){
-        startBrowser("EDGE","https://ndosisimplifiedautomation.vercel.app/");
-    }
-
 }
