@@ -1,3 +1,4 @@
+@login
 Feature: Login
 
   Scenario Outline: Login to Ndosi Automation Website
