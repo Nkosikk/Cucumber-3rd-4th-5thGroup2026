@@ -1,8 +1,9 @@
 package Steps;
 
+import Utils.BrowserFactory;
 import io.cucumber.java.en.*;
 
-public class LoginSteps {
+public class LoginSteps extends Base {
 
     @Given("I am on home page")
     public void i_am_on_home_page() {
@@ -10,6 +11,7 @@ public class LoginSteps {
     }
     @And("I click login button")
     public void i_click_login_button() {
+        homePage.clickLoginButton();
 
     }
     @And("I enter username (.*)$")
@@ -26,6 +28,11 @@ public class LoginSteps {
     }
     @Then("I should be logged in successfully")
     public void i_should_be_logged_in_successfully() {
+
+    }
+
+    @And("Verify Menu button exist")
+    public void verifyMenuButtonExist() {
 
     }
 }
