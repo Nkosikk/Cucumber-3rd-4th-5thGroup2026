@@ -1,7 +1,6 @@
 package TestData;
 
 import com.github.javafaker.Faker;
-import org.testng.annotations.Test;
 
 import java.util.Random;
 
@@ -17,12 +16,5 @@ public class GenerateTestData {
     Random random = new Random();
     int number = random.nextInt(1455466,8986557);
 
-
-
-    @Test
-    public void deleteThisWhenDone(){
-        System.out.println(number);
-
-    }
 
 }
