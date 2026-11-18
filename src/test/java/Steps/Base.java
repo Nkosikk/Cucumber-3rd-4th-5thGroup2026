@@ -1,4 +1,4 @@
-package Steps;
+package steps;
 
 import Pages.HomePage;
 import Utils.BrowserFactory;
@@ -11,6 +11,6 @@ public class Base{
 
      final WebDriver driver=browserFactory.startBrowser("chrome","https://ndosisimplifiedautomation.vercel.app/");
 
-    HomePage homePage = PageFactory.initElements(driver,HomePage.class);
+    HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 
 }

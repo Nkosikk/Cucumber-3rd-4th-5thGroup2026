@@ -1,7 +1,7 @@
 package TestData;
 
 import com.github.javafaker.Faker;
-import org.testng.annotations.Test;
+
 
 import java.util.Random;
 
@@ -19,10 +19,6 @@ public class GenerateTestData {
 
 
 
-    @Test
-    public void deleteThisWhenDone(){
-        System.out.println(number);
 
     }
 
-}

@@ -1,5 +1,6 @@
 Feature: Login
 
+  @login
   Scenario Outline: Login to Ndosi Automation Website
     Given I am on home page
     And I click login button
@@ -10,7 +11,7 @@ Feature: Login
 
     Examples:
       | username | password |
-      | njceles@gmail.com    | @12345678    |
+      | titi@gmail.com    | tlou@97LT    |
 
 #  Scenario Outline: Verify Menu button exist
 #    Given I am on home page
@@ -23,4 +24,4 @@ Feature: Login
 #
 #    Examples:
 #      | username | password |
-#      | njceles@gmail.com    | @12345678    |
+#      | titi@gmail.com    | tlou@97LT   |
