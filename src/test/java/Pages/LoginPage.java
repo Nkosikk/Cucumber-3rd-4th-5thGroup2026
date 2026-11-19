@@ -20,9 +20,11 @@ public class LoginPage {
 
     @FindBy(id = "login-email")
     WebElement emailInputText;
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
+
     public void enterUserName(String username) {
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(emailInputText));
 
