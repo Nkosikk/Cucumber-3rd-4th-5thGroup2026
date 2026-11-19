@@ -16,14 +16,17 @@ public class LoginSteps extends Base {
     }
     @And("I enter username (.*)$")
     public void i_enter_username(String username) {
+        loginPage.enterEmail(username);
 
     }
     @And("I enter password (.*)$")
     public void i_enter_password(String password) {
+        loginPage.enterPassword(password);
 
     }
     @When("I click submit button")
     public void i_click_submit_button() {
+        loginPage.clickSubmitButton();
 
     }
     @Then("I should be logged in successfully")
