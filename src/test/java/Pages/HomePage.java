@@ -9,22 +9,18 @@ import java.time.Duration;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
-public class HomePage {
-
-    WebDriver driver;
+public class HomePage extends BasePage{
 
 
     @FindBy(xpath = "//button[.//span[text()='Login']]")
     WebElement loginButton;
 
-    public HomePage() {
-        this.driver = driver;
+    public HomePage(WebDriver driver) {
+        super(driver);
     }
 
     public void clickLoginButton() {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(loginButton));
-        loginButton.isDisplayed();
-        loginButton.click();
+        click(loginButton);
     }
 
 }

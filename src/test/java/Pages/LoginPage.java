@@ -13,9 +13,8 @@ import java.time.Duration;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
-public class LoginPage {
+public class LoginPage extends BasePage{
 
-    WebDriver driver;
 
 
     @FindBy(id = "login-email")
@@ -29,13 +28,11 @@ public class LoginPage {
 
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void enterUserName(String username) {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(emailInputText));
-
-        emailInputText.sendKeys(username);
+        enterText(emailInputText,username);
     }
 
     public void enterPassword(String password) {
