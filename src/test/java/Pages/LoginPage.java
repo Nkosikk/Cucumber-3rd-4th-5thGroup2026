@@ -21,6 +21,13 @@ public class LoginPage {
     @FindBy(id = "login-email")
     WebElement emailInputText;
 
+    @FindBy(id = "login-password")
+    WebElement passwordInputText;
+
+    @FindBy(id = "login-submit")
+    WebElement submitButton;
+
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -30,4 +37,14 @@ public class LoginPage {
 
         emailInputText.sendKeys(username);
     }
+
+    public void enterPassword(String password) {
+
+        passwordInputText.sendKeys(password);
+    }
+
+    public void clickLoginButton() {
+        submitButton.click();
+    }
+
 }
