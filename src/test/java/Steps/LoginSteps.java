@@ -1,5 +1,6 @@
 package Steps;
 
+import Pages.LoginPage;
 import Utils.BrowserFactory;
 import io.cucumber.java.en.*;
 
@@ -16,6 +17,7 @@ public class LoginSteps extends Base {
     }
     @And("I enter username (.*)$")
     public void i_enter_username(String username) {
+        loginPage.enterUserName(username);
 
     }
     @And("I enter password (.*)$")
