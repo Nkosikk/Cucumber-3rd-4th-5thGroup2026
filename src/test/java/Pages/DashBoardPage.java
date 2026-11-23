@@ -8,18 +8,30 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class DashBoardPage {
+public class DashBoardPage extends BasePage {
 
-    WebDriver driver;
+   // WebDriver driver;
 
 
     @FindBy(xpath = "//span[text()='Welcome']")
     WebElement welcomeText;
 
+    @FindBy(xpath = "//*[@id='app-root']//nav//button[span[normalize-space()='Menu']]")
+    WebElement menuButton;
+
+    public DashBoardPage(WebDriver driver) {
+        super(driver);
+    }
+
     public void verifyLoginSuccess() {
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(welcomeText));
 
         welcomeText.isDisplayed();
+    }
+
+    public void verifyMenuButtonDisplayed() {
+        menuButton.isDisplayed();
+        click(menuButton);
     }
 
 }
