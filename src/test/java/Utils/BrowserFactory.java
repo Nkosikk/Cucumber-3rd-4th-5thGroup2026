@@ -6,10 +6,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 
 import java.util.Locale;
 

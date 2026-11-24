@@ -24,10 +24,12 @@ public class LoginSteps extends Base {
     public void i_enter_password(String password) {
         loginPage.enterPassword(password);
     }
+
     @When("I click submit button")
     public void i_click_submit_button() {
         loginPage.clickLoginButton();
     }
+
     @Then("I should be logged in successfully")
     public void i_should_be_logged_in_successfully() {
         dashBoardPage.verifyLoginSuccess();

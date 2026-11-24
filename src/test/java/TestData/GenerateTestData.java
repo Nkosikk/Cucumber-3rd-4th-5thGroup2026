@@ -1,10 +1,7 @@
 package TestData;
 
 import com.github.javafaker.Faker;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
 import java.util.Random;
 
@@ -21,11 +18,8 @@ public class GenerateTestData {
     int number = random.nextInt(1455466,8986557);
 
 
-<<<<<<< HEAD
+
 
 
     }
 
-=======
-}
->>>>>>> origin/main
