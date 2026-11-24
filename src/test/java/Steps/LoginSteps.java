@@ -2,6 +2,7 @@ package Steps;
 
 import Pages.LoginPage;
 import Utils.BrowserFactory;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 
 public class LoginSteps extends Base {
@@ -36,6 +37,11 @@ public class LoginSteps extends Base {
 
     @And("Verify Menu button exist")
     public void verifyMenuButtonExist() {
+
+    }
+
+    @Then("I should see an error message")
+    public void iShouldSeeAnErrorMessage() {
 
     }
 }
