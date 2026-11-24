@@ -31,6 +31,16 @@
 
         <!-- Source: https://mvnrepository.com/artifact/org.junit.platform/junit-platform-suite -->
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <version>8.0.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+>>>>>>> origin/main
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite</artifactId>
             <version>6.1.3</version>
@@ -63,6 +73,12 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>tools.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>3.2.3</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
