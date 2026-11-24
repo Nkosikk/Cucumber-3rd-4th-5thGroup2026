@@ -16,11 +16,13 @@ public class HomePage extends BasePage{
     WebElement loginButton;
 
     public HomePage(WebDriver driver) {
+
         super(driver);
     }
 
     public void clickLoginButton() {
         click(loginButton);
+
     }
 
 }
