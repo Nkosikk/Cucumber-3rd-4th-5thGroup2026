@@ -28,10 +28,12 @@ public class LoginPage extends BasePage{
 
 
     public LoginPage(WebDriver driver) {
+
         super(driver);
     }
 
     public void enterUserName(String username) {
+
         enterText(emailInputText,username);
     }
 
@@ -41,6 +43,7 @@ public class LoginPage extends BasePage{
     }
 
     public void clickLoginButton() {
+
         submitButton.click();
     }
 

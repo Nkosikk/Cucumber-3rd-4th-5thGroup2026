@@ -22,6 +22,7 @@ public class BasePage {
     }
 
     protected void click(WebElement element) {
+
         wait.until(elementToBeClickable(element)).click();
     }
 
@@ -31,4 +32,14 @@ public class BasePage {
         visibleElement.sendKeys(text);
 
     }
+
+    protected void verifyElementIsDisplayed(WebElement element){
+        WebElement verifyElement = wait.until(visibilityOf(element));
+        verifyElement.isDisplayed();
+
+    }
+
+
+
+
 }

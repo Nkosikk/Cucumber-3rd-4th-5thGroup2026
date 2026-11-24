@@ -8,18 +8,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class DashBoardPage {
-
-    WebDriver driver;
-
+public class DashBoardPage extends BasePage{
 
     @FindBy(xpath = "//span[text()='Welcome']")
     WebElement welcomeText;
 
-    public void verifyLoginSuccess() {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(welcomeText));
+    public DashBoardPage(WebDriver driver){
+        super(driver);
 
-        welcomeText.isDisplayed();
     }
+
+    public void verifyLoginSuccess() {
+        verifyElementIsDisplayed(welcomeText);
+
+    }
+
+
 
 }
