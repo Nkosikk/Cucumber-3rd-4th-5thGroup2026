@@ -2,6 +2,7 @@ package Steps;
 
 import Pages.LoginPage;
 import Utils.BrowserFactory;
+import Utils.ConfigReader;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 
@@ -18,11 +19,11 @@ public class LoginSteps extends Base {
     }
     @And("I enter username (.*)$")
     public void i_enter_username(String username) {
-        loginPage.enterUserName(username);
+        loginPage.enterUserName(email);
 
     }
     @And("I enter password (.*)$")
-    public void i_enter_password(String password) {
+    public void i_enter_password(String passwords) {
         loginPage.enterPassword(password);
     }
     @When("I click submit button")
