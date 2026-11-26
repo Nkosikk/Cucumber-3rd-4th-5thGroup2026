@@ -1,6 +1,7 @@
 package Steps;
 
 import Utils.BrowserFactory;
+import Utils.ConfigReader;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
@@ -13,17 +14,20 @@ import static Utils.BrowserFactory.startBrowser;
 
 public class Hooks {
 
-    private static WebDriver DRIVER;
+//    private static WebDriver DRIVER;
+
+    private static final ThreadLocal<WebDriver> DRIVER = new ThreadLocal<>();
 
     @Before
     public void openBrowser() {
+        String browser = ConfigReader.getRequired("browser");
+        String url = ConfigReader.getRequired("base.url");
+        DRIVER.set(BrowserFactory.startBrowser(browser, url));
 
-
-        DRIVER = startBrowser("chrome", "https://ndosisimplifiedautomation.vercel.app/");
     }
 
     static WebDriver getDriver() {
-        WebDriver driver = DRIVER;
+        WebDriver driver = DRIVER.get();
         if (driver == null) {
             throw new IllegalStateException("The driver has been started");
         }
@@ -33,7 +37,7 @@ public class Hooks {
 
     @After
     public void cloneBrowser() {
-        WebDriver driver = DRIVER;
+        WebDriver driver = DRIVER.get();
 
         if (driver != null) {
             driver.quit();

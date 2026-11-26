@@ -12,7 +12,7 @@ import static io.cucumber.junit.platform.engine.Constants.*;
 @IncludeEngines("cucumber")
 @SelectPackages("Features")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "Steps")
-@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@validLogin")
+@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@ValidLogin")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "html:target/cucumber-report.html," +
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:")
 @ConfigurationParameter(key = ANSI_COLORS_DISABLED_PROPERTY_NAME, value = "true")
